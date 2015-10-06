@@ -26,7 +26,7 @@
 
         this.date = new Date();
         this.date.setHours(0, 0, 0, 0); // get today's date at midnight
-        Math.seedrandom(this.date.getTime());
+        Math.seedrandom(Date.UTC(this.date.getYear(), this.date.getMonth(), this.date.getDate()));
 
         this.dailyIndex = Math.floor((Math.random() * this.bounties.length));
       },
