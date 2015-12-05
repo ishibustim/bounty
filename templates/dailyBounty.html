@@ -1,6 +1,8 @@
-<div class="dailyBounty">
-  <h3 class="bountyTitle">{{dailyBountyCtrl.bounties[dailyBountyCtrl.dailyIndex].name}}</h3>
-  <div class="bountyDescription">
-    {{dailyBountyCtrl.bounties[dailyBountyCtrl.dailyIndex].description}}
+<div ng-repeat="bounty in dailyBountyCtrl.prevBounties track by $index">
+  <div class="dailyBounty" ng-class="'prevday' + $index">
+    <h3 class="bountyTitle">{{dailyBountyCtrl.bounties[bounty].name}}</h3>
+    <div class="bountyDescription">
+      {{dailyBountyCtrl.bounties[bounty].description}}
+    </div>
   </div>
 </div>
